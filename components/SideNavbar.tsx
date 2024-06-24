@@ -1,8 +1,8 @@
 /** @format */
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Nav } from './ui/Nav';
+import { useState } from "react";
+import { Nav } from "./ui/Nav";
 
 type Props = {};
 
@@ -12,10 +12,10 @@ import {
   UsersRound,
   Settings,
   ChevronRight,
-} from 'lucide-react';
-import { Button } from './ui/Button';
+} from "lucide-react";
+import { Button } from "./ui/Button";
 
-import { useWindowWidth } from '@react-hook/window-size';
+import { useWindowWidth } from "@react-hook/window-size";
 
 export default function SideNavbar({}: Props) {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -44,28 +44,28 @@ export default function SideNavbar({}: Props) {
         isCollapsed={mobileWidth ? true : isCollapsed}
         links={[
           {
-            title: 'Dashboard',
-            href: '/',
+            title: "Dashboard",
+            href: "/",
             icon: LayoutDashboard,
-            variant: 'default',
+            variant: "default",
           },
           {
-            title: 'Users',
-            href: '/users',
+            title: "Users",
+            href: "/users",
             icon: UsersRound,
-            variant: 'ghost',
+            variant: "ghost",
           },
           {
-            title: 'Ordrs',
-            href: '/orders',
+            title: "Orders",
+            href: "/orders",
             icon: ShoppingCart,
-            variant: 'ghost',
+            variant: "ghost",
           },
           {
-            title: 'Settings',
-            href: '/settings',
+            title: "Settings",
+            href: "/settings",
             icon: Settings,
-            variant: 'ghost',
+            variant: "ghost",
           },
         ]}
       />
