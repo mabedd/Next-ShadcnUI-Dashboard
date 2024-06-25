@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { DataTable } from "@/components/DataTable";
-import { ColumnDef } from "@tanstack/react-table";
-import React, { useEffect, useState } from "react";
-import PageTitle from "@/components/PageTitle";
-import { cn } from "@/lib/utils";
+import { DataTable } from '@/components/DataTable';
+import { ColumnDef } from '@tanstack/react-table';
+import React, { useEffect, useState } from 'react';
+import PageTitle from '@/components/PageTitle';
+import { cn } from '@/lib/utils';
 import {
   BarChart,
   Bar,
@@ -13,8 +13,9 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-} from "recharts";
-import { CardContent } from "@/components/Card";
+  Legend,
+} from 'recharts';
+import { CardContent } from '@/components/Card';
 
 type Props = {};
 type Payment = {
@@ -26,133 +27,133 @@ type Payment = {
 
 const columns: ColumnDef<Payment>[] = [
   {
-    accessorKey: "order",
-    header: "Order",
+    accessorKey: 'order',
+    header: 'Order',
   },
   {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: 'status',
+    header: 'Status',
     cell: ({ row }) => {
       return (
         <div
-          className={cn("font-medium w-fit px-4 py-2 rounded-lg", {
-            "bg-red-200": row.getValue("status") === "Pending",
-            "bg-orange-200": row.getValue("status") === "Processing",
-            "bg-green-200": row.getValue("status") === "Completed",
+          className={cn('font-medium w-fit px-4 py-2 rounded-lg', {
+            'bg-red-200': row.getValue('status') === 'Pending',
+            'bg-orange-200': row.getValue('status') === 'Processing',
+            'bg-green-200': row.getValue('status') === 'Completed',
           })}
         >
-          {row.getValue("status")}
+          {row.getValue('status')}
         </div>
       );
     },
   },
   {
-    accessorKey: "lastOrder",
-    header: "Last Order",
+    accessorKey: 'lastOrder',
+    header: 'Last Order',
   },
   {
-    accessorKey: "method",
-    header: "Method",
+    accessorKey: 'method',
+    header: 'Method',
   },
 ];
 
 const data: Payment[] = [
   {
-    order: "ORD001",
-    status: "Pending",
-    lastOrder: "2023-01-15",
-    method: "Credit Card",
+    order: 'ORD001',
+    status: 'Pending',
+    lastOrder: '2023-01-15',
+    method: 'Credit Card',
   },
   {
-    order: "ORD002",
-    status: "Processing",
-    lastOrder: "2023-02-20",
-    method: "PayPal",
+    order: 'ORD002',
+    status: 'Processing',
+    lastOrder: '2023-02-20',
+    method: 'PayPal',
   },
   {
-    order: "ORD003",
-    status: "Completed",
-    lastOrder: "2023-03-10",
-    method: "Stripe",
+    order: 'ORD003',
+    status: 'Completed',
+    lastOrder: '2023-03-10',
+    method: 'Stripe',
   },
   {
-    order: "ORD004",
-    status: "Pending",
-    lastOrder: "2023-04-05",
-    method: "Venmo",
+    order: 'ORD004',
+    status: 'Pending',
+    lastOrder: '2023-04-05',
+    method: 'Venmo',
   },
   {
-    order: "ORD005",
-    status: "Completed",
-    lastOrder: "2023-05-12",
-    method: "Bank Transfer",
+    order: 'ORD005',
+    status: 'Completed',
+    lastOrder: '2023-05-12',
+    method: 'Bank Transfer',
   },
   {
-    order: "ORD006",
-    status: "Processing",
-    lastOrder: "2023-06-18",
-    method: "Apple Pay",
+    order: 'ORD006',
+    status: 'Processing',
+    lastOrder: '2023-06-18',
+    method: 'Apple Pay',
   },
   {
-    order: "ORD007",
-    status: "Completed",
-    lastOrder: "2023-07-22",
-    method: "Google Pay",
+    order: 'ORD007',
+    status: 'Completed',
+    lastOrder: '2023-07-22',
+    method: 'Google Pay',
   },
   {
-    order: "ORD008",
-    status: "Pending",
-    lastOrder: "2023-08-30",
-    method: "Cryptocurrency",
+    order: 'ORD008',
+    status: 'Pending',
+    lastOrder: '2023-08-30',
+    method: 'Cryptocurrency',
   },
   {
-    order: "ORD009",
-    status: "Processing",
-    lastOrder: "2023-09-05",
-    method: "Alipay",
+    order: 'ORD009',
+    status: 'Processing',
+    lastOrder: '2023-09-05',
+    method: 'Alipay',
   },
   {
-    order: "ORD010",
-    status: "Completed",
-    lastOrder: "2023-10-18",
-    method: "WeChat Pay",
+    order: 'ORD010',
+    status: 'Completed',
+    lastOrder: '2023-10-18',
+    method: 'WeChat Pay',
   },
   {
-    order: "ORD011",
-    status: "Pending",
-    lastOrder: "2023-11-25",
-    method: "Square Cash",
+    order: 'ORD011',
+    status: 'Pending',
+    lastOrder: '2023-11-25',
+    method: 'Square Cash',
   },
   {
-    order: "ORD012",
-    status: "Completed",
-    lastOrder: "2023-12-08",
-    method: "Zelle",
+    order: 'ORD012',
+    status: 'Completed',
+    lastOrder: '2023-12-08',
+    method: 'Zelle',
   },
   {
-    order: "ORD013",
-    status: "Processing",
-    lastOrder: "2024-01-15",
-    method: "Stripe",
+    order: 'ORD013',
+    status: 'Processing',
+    lastOrder: '2024-01-15',
+    method: 'Stripe',
   },
   {
-    order: "ORD014",
-    status: "Completed",
-    lastOrder: "2024-02-20",
-    method: "PayPal",
+    order: 'ORD014',
+    status: 'Completed',
+    lastOrder: '2024-02-20',
+    method: 'PayPal',
   },
   {
-    order: "ORD015",
-    status: "Pending",
-    lastOrder: "2024-03-30",
-    method: "Credit Card",
+    order: 'ORD015',
+    status: 'Pending',
+    lastOrder: '2024-03-30',
+    method: 'Credit Card',
   },
 ];
 
 const statusCounts = [
-  { status: "Pending", count: 5 },
-  { status: "Processing", count: 4 },
-  { status: "Completed", count: 6 },
+  { status: 'Pending', count: 5 },
+  { status: 'Processing', count: 4 },
+  { status: 'Completed', count: 6 },
 ];
 
 // Function to count order statuses
@@ -174,26 +175,26 @@ export default function OrdersPage({}: Props) {
     setIsMounted(true);
   }, []);
 
-  const statusCounts = countStatuses(data);
-
   return (
     <div className="flex flex-col gap-5 w-full p-4">
       <PageTitle title="Orders" />
+      <h2 className="text-lg font-semibold">Summary</h2>
+      <CardContent>
+        <p className="p-4 font-semibold">Overview</p>
+        <BarChart
+          width={600}
+          height={400}
+          data={statusCounts}
+          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+        >
+          <XAxis dataKey="status" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="count" fill="#88888" />
+        </BarChart>
+      </CardContent>
       <div className="flex justify-between items-center">
-        <div className="w-full h-64">
-          <h2 className="text-lg font-semibold">Summary</h2>
-          <CardContent>
-            <ResponsiveContainer>
-              <BarChart data={statusCounts}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="status" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="count" fill="#8884d8" />
-              </BarChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </div>
         <div className="flex w-full max-w-md">
           <input
             type="text"

@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react';
 import {
   LineChart,
   Line,
@@ -10,21 +10,21 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-} from "recharts";
+} from 'recharts';
 
 const salesData = [
-  { month: "January", sales: 4000 },
-  { month: "February", sales: 3000 },
-  { month: "March", sales: 2000 },
-  { month: "April", sales: 2780 },
-  { month: "May", sales: 1890 },
-  { month: "June", sales: 2390 },
-  { month: "July", sales: 3490 },
-  { month: "August", sales: 4300 },
-  { month: "September", sales: 4100 },
-  { month: "October", sales: 4700 },
-  { month: "November", sales: 4500 },
-  { month: "December", sales: 5000 },
+  { month: 'January', sales: 4000 },
+  { month: 'February', sales: 3000 },
+  { month: 'March', sales: 2000 },
+  { month: 'April', sales: 2780 },
+  { month: 'May', sales: 1890 },
+  { month: 'June', sales: 2390 },
+  { month: 'July', sales: 3490 },
+  { month: 'August', sales: 4300 },
+  { month: 'September', sales: 4100 },
+  { month: 'October', sales: 4700 },
+  { month: 'November', sales: 4500 },
+  { month: 'December', sales: 5000 },
 ];
 
 const SalesLineChart = () => (
@@ -46,7 +46,7 @@ const SalesLineChart = () => (
       <Line
         type="monotone"
         dataKey="sales"
-        stroke="#8884d8"
+        stroke="#888888"
         activeDot={{ r: 8 }}
       />
     </LineChart>
