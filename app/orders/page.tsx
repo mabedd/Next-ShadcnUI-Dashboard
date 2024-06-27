@@ -194,18 +194,6 @@ export default function OrdersPage({}: Props) {
           <Bar dataKey="count" fill="#88888" />
         </BarChart>
       </CardContent>
-      <div className="flex justify-between items-center">
-        <div className="flex w-full max-w-md">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="border p-2 rounded flex-grow"
-          />
-          <button className="ml-2 bg-blue-500 text-white p-2 rounded flex-shrink-0">
-            Filter
-          </button>
-        </div>
-      </div>
       <DataTable columns={columns} data={data} />
     </div>
   );
