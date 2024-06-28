@@ -13,7 +13,7 @@ import {
   Settings,
   ChevronRight,
 } from "lucide-react";
-import { Button } from "./ui/Button";
+import { Button } from "./ui/button";
 
 import { useWindowWidth } from "@react-hook/window-size";
 
