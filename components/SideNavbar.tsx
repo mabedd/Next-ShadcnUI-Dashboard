@@ -1,10 +1,10 @@
 /** @format */
-"use client";
+'use client'
 
-import { useState } from "react";
-import { Nav } from "./ui/Nav";
+import { useState } from 'react'
+import { Nav } from './ui/Nav'
 
-type Props = {};
+type Props = {}
 
 import {
   ShoppingCart,
@@ -12,29 +12,29 @@ import {
   UsersRound,
   Settings,
   ChevronRight,
-} from "lucide-react";
-import { Button } from "./ui/button";
+} from 'lucide-react'
+import { Button } from './ui/Button'
 
-import { useWindowWidth } from "@react-hook/window-size";
+import { useWindowWidth } from '@react-hook/window-size'
 
 export default function SideNavbar({}: Props) {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false)
 
-  const onlyWidth = useWindowWidth();
-  const mobileWidth = onlyWidth < 768;
+  const onlyWidth = useWindowWidth()
+  const mobileWidth = onlyWidth < 768
 
   function toggleSidebar() {
-    setIsCollapsed(!isCollapsed);
+    setIsCollapsed(!isCollapsed)
   }
 
   return (
-    <div className="relative min-w-[80px] border-r px-3  pb-10 pt-24 ">
+    <div className='relative min-w-[80px] border-r px-3  pb-10 pt-24 '>
       {!mobileWidth && (
-        <div className="absolute right-[-20px] top-7">
+        <div className='absolute right-[-20px] top-7'>
           <Button
             onClick={toggleSidebar}
-            variant="secondary"
-            className=" rounded-full p-2"
+            variant='secondary'
+            className=' rounded-full p-2'
           >
             <ChevronRight />
           </Button>
@@ -44,31 +44,31 @@ export default function SideNavbar({}: Props) {
         isCollapsed={mobileWidth ? true : isCollapsed}
         links={[
           {
-            title: "Dashboard",
-            href: "/",
+            title: 'Dashboard',
+            href: '/',
             icon: LayoutDashboard,
-            variant: "default",
+            variant: 'default',
           },
           {
-            title: "Users",
-            href: "/users",
+            title: 'Users',
+            href: '/users',
             icon: UsersRound,
-            variant: "ghost",
+            variant: 'ghost',
           },
           {
-            title: "Orders",
-            href: "/orders",
+            title: 'Orders',
+            href: '/orders',
             icon: ShoppingCart,
-            variant: "ghost",
+            variant: 'ghost',
           },
           {
-            title: "Settings",
-            href: "/settings",
+            title: 'Settings',
+            href: '/settings',
             icon: Settings,
-            variant: "ghost",
+            variant: 'ghost',
           },
         ]}
       />
     </div>
-  );
+  )
 }
