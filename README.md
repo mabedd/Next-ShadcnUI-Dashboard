@@ -18,7 +18,7 @@ A fully comprehensive statistical dashboard for managin eCommerce websites built
   
 ![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Shadcn UI](https://img.shields.io/badge/Accternity%20UI-4B32C3?style=for-the-badge&logo=ui&logoColor=white)
+![Shadcn UI](https://img.shields.io/badge/Shadcn%20UI-4B32C3?style=for-the-badge&logo=ui&logoColor=white)
 ![Netlify](https://img.shields.io/badge/Netlify-%2300C7B7.svg?style=for-the-badge&logo=netlify&logoColor=white)
 
 </div>
