@@ -3,7 +3,7 @@
 
 ## About the Project
 
-A fully comprehensive statistical dashboard for managin eCommerce websites built with [Next.js](https://nextjs.org/), styled using [Tailwind CSS](https://tailwindcss.com/).
+A fully comprehensive statistical dashboard for managing eCommerce websites built with [Next.js](https://nextjs.org/), styled using [Tailwind CSS](https://tailwindcss.com/).
 
 ## Features
 
